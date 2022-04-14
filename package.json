@@ -1,0 +1,49 @@
+{
+  "name": "@temple/lib",
+  "version": "1.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "node index.js && rimraf dist && tsc",
+    "lint": "eslint --ext=jsx,ts,tsx src",
+    "lint:fix": "eslint --fix --ext=jsx,ts,tsx src",
+    "prepublish": "npm run build && cp package.json dist",
+    "fmt:write": "prettier -w ./src"
+  },
+  "author": "John Carter<johncarter7061@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/johnkcr/temple-lib/issues"
+  },
+  "homepage": "https://github.com/johnkcr/temple-lib#readme",
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "ssh://git@github.com:johnkcr/temple-lib.git"
+  },
+  "prettier": {
+    "tabWidth": 2,
+    "printWidth": 120,
+    "singleQuote": true,
+    "trailingComma": "none",
+    "semi": true
+  },
+  "devDependencies": {
+    "@types/node": "^17.0.21",
+    "@typescript-eslint/eslint-plugin": "5.14.0",
+    "@typescript-eslint/parser": "5.14.0",
+    "eslint": "8.10.0",
+    "eslint-config-prettier": "8.5.0",
+    "prettier": "^2.6.0",
+    "rimraf": "^3.0.2",
+    "typescript": "^4.6.2"
+  },
+  "keywords": [],
+  "dependencies": {
+    "ethers": "^5.4.7",
+    "moment": "^2.29.1"
+  }
+}
